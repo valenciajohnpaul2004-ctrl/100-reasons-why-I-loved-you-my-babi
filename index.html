@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#8bd8ff">
+  <meta name="description" content="A little website with 100 reasons why I love my Babi.">
+  <title>100 Reasons I Love My Babi 💙</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="sky-glow glow-one"></div>
+  <div class="sky-glow glow-two"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Back to top"><span class="brand-heart">♥</span> for my babi</a>
+    <nav aria-label="Main navigation">
+      <a href="#reasons">The reasons</a>
+      <a href="#little-note">A little note</a>
+    </nav>
+    <button id="themeToggle" class="icon-button" type="button" aria-label="Toggle color theme" title="Toggle color theme">☾</button>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="floating-heart heart-a">♥</div>
+      <div class="floating-heart heart-b">♡</div>
+      <div class="eyebrow"><span class="sparkle">✦</span> a little corner of the internet, just for you</div>
+      <h1 id="hero-title">100 Reasons<br><span>Why I Love You</span></h1>
+      <p class="hero-subtitle">For my favorite person, my safe place, and my babi. 💙</p>
+      <p class="hero-copy">There are a hundred reasons written here, and a million more that words could never fully explain.</p>
+      <div class="hero-actions">
+        <a class="primary-button" href="#reasons">Explore our 100 reasons <span aria-hidden="true">↓</span></a>
+        <button id="surpriseButton" class="secondary-button" type="button">Surprise me ✨</button>
+      </div>
+      <div class="hero-stats" aria-label="Website statistics">
+        <div><strong>100</strong><span>little reasons</span></div>
+        <div class="stat-divider"></div>
+        <div><strong>∞</strong><span>more to come</span></div>
+        <div class="stat-divider"></div>
+        <div><strong>1</strong><span>special babi</span></div>
+      </div>
+      <div class="scroll-cue"><span></span> scroll a little, love</div>
+    </section>
+
+    <section class="reasons-section section-wrap" id="reasons">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">A hundred little pieces of my heart</p>
+          <h2>Reasons I love <span>you</span></h2>
+          <p class="section-description">Read them one by one, search for a feeling, or save the ones you want to keep close.</p>
+        </div>
+        <div class="progress-card">
+          <div class="progress-top"><span>Your journey</span><strong id="progressText">0 / 100 read</strong></div>
+          <div class="progress-track"><div id="progressBar" class="progress-fill"></div></div>
+          <small>Tap a card to mark it as read.</small>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <label class="search-box" for="searchInput">
+          <span aria-hidden="true">⌕</span>
+          <input id="searchInput" type="search" placeholder="Search a reason..." autocomplete="off">
+          <kbd>/</kbd>
+        </label>
+        <div class="filter-row" role="group" aria-label="Filter reasons">
+          <button class="filter-chip active" data-filter="all" type="button">All reasons <span>100</span></button>
+          <button class="filter-chip" data-filter="heart" type="button">♡ Favorites <span id="favoriteCount">0</span></button>
+          <button class="filter-chip" data-filter="unread" type="button">Not read yet</button>
+        </div>
+        <select id="sortSelect" aria-label="Sort reasons">
+          <option value="default">Sort: in order</option>
+          <option value="random">Sort: surprise me</option>
+          <option value="read">Sort: unread first</option>
+        </select>
+      </div>
+
+      <div id="categoryFilters" class="category-filters" aria-label="Filter by category"></div>
+      <div id="reasonGrid" class="reason-grid" aria-live="polite"></div>
+      <div id="emptyState" class="empty-state" hidden>
+        <span>♡</span><h3>No reasons found</h3><p>Try another search or choose a different filter.</p>
+        <button id="resetFilters" class="secondary-button" type="button">Show all reasons</button>
+      </div>
+      <div class="load-more-wrap">
+        <p id="resultsCount" class="results-count">Showing 100 reasons</p>
+        <button id="showMoreButton" class="secondary-button" type="button" hidden>Show more reasons ↓</button>
+      </div>
+    </section>
+
+    <section class="note-section section-wrap" id="little-note">
+      <div class="note-card">
+        <div class="note-decoration">♡</div>
+        <p class="section-kicker">Just between us</p>
+        <h2>A little note for <span>my Babi</span></h2>
+        <p class="note-message">My babi, this page is only a small way of showing how much you mean to me. I love the little things about you, the moments we share, and the way ordinary days feel more special with you in them. Even after these 100 reasons, I know there will always be more. Thank you for being you. I hope this reminds you that you are loved, appreciated, and special to me. 💙</p>
+        <div class="signature">Always your person <span>♥</span></div>
+        <button id="copyNoteButton" class="secondary-button" type="button">Copy this note ⧉</button>
+      </div>
+    </section>
+
+    <section class="final-section">
+      <div class="final-heart">♥</div>
+      <p>100 reasons written down.</p>
+      <h2>And still, <em>you're my favorite.</em></h2>
+      <button id="backToTop" class="primary-button" type="button">Back to the top ↑</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with <span>♥</span> and a sky-blue kind of love.</p>
+    <small>For my Babi, today and all the days after. 💙</small>
+  </footer>
+
+  <div id="surpriseModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-card">
+      <button class="modal-close icon-button" type="button" aria-label="Close surprise" data-close-modal>×</button>
+      <div class="modal-heart">♡</div>
+      <p class="section-kicker">A tiny reminder</p>
+      <h2 id="modalTitle">Here's one reason...</h2>
+      <p id="surpriseReason" class="surprise-reason"></p>
+      <span id="surpriseNumber" class="surprise-number"></span>
+      <div class="modal-actions">
+        <button id="anotherSurprise" class="primary-button" type="button">Another one ✨</button>
+        <button id="closeSurprise" class="secondary-button" type="button">Keep exploring</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
